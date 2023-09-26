@@ -39,7 +39,7 @@ public class Account {
     private double balance;
 
     @Column(name = "currency_code")
-    private CurrencyCode currencyCode;
+    private CurrencyCode currencyCode; //
 
     @Column(name = "created_at")
     private Timestamp createdAt;
