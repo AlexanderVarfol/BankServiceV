@@ -25,19 +25,19 @@ public class Manager {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "first_Name")
-    private String firstName; //varchar
+    @Column(name = "first_name")
+    private String firstName;
 
-    @Column(name = "last_Name")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "manager_status")
     private ManagerStats status;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @Column(name = "updated_At")
+    @Column(name = "updated_at")
     private Timestamp updatedAt;
 
     @OneToMany(mappedBy = "transaction", fetch = FetchType.LAZY,

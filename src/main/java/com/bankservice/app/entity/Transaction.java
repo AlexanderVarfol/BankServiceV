@@ -23,12 +23,12 @@ public class Transaction {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "debit_Account_Id")
+    @Column(name = "debit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account debitAccount;
 
-    @Column(name = "credit_Account_Id")
+    @Column(name = "credit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account creditAccount;
@@ -42,7 +42,7 @@ public class Transaction {
     @Column(name = "description")
     private char description;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
     @OneToMany(mappedBy = "transaction", fetch = FetchType.LAZY,

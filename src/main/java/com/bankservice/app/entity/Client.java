@@ -24,21 +24,21 @@ public class Client {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "manager_Id")
+    @Column(name = "manager_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Manager manager;
 
-    @Column(name = "status")
+    @Column(name = "client_status")
     private ClientInfoStatus status;
 
-    @Column(name = "taxCode")
+    @Column(name = "tax_code")
     private Integer taxCode;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "email")
@@ -47,17 +47,14 @@ public class Client {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "phone")
+    @Column(name = "phone_nummber")
     private String phone;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @Column(name = "updated_At")
+    @Column(name = "updated_at")
     private Timestamp updatedAt;
-
-
-
 
     @Override
     public String toString() {

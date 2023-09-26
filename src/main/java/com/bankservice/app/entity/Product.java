@@ -26,7 +26,7 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @JoinColumn(name = "manager_Id")
+    @JoinColumn(name = "manager_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Manager manager;
@@ -34,22 +34,22 @@ public class Product {
     @Column(name = "Product_status")
     private int status;
 
-    @Column(name = "currency_Code")
+    @Column(name = "currency_code")
     private int currencyCode;
 
-    @Column(name = "interest_Rate")
+    @Column(name = "interest_rate")
     private int interestRate;
 
     @Column(name = "Produckt_limit")
     private int limit;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @Column(name = "updated_At")
+    @Column(name = "updated_at")
     private Timestamp updatedAt;
 
-    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY,          //OneToMany - долден быть контейнер
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY,
             orphanRemoval = true, cascade = {MERGE, PERSIST, REFRESH})
     private List<Manager> managers;
 

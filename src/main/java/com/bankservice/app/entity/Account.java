@@ -1,11 +1,5 @@
 package com.bankservice.app.entity;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.ResultSet;
-
 import com.bankservice.app.entity.enums.AccountType;
 import com.bankservice.app.entity.enums.CurrencyCode;
 import jakarta.persistence.*;
@@ -27,30 +21,30 @@ import static jakarta.persistence.CascadeType.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Account {
-    //private UUID id;
+
     @Id
     @Column(name= "id" )
     private int id;
 
-    @Column(name = "name")
+    @Column(name = "account_name")
     private String name;
 
-    @Column(name = "type")
+    @Column(name = "account_type")
     private AccountType type;
 
-    @Column(name = "status")
+    @Column(name = "account_status")
     private boolean status;
 
     @Column(name = "balance")
     private double balance;
 
-    @Column(name = "currency_Code")
+    @Column(name = "currency_code")
     private CurrencyCode currencyCode;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @Column(name = "updated_At")
+    @Column(name = "updated_at")
     private Timestamp updatedAt;
 
     @OneToOne(cascade = {MERGE, PERSIST, REFRESH})

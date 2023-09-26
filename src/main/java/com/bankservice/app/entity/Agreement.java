@@ -22,29 +22,29 @@ public class Agreement {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "account_Id")
+    @Column(name = "account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account account;
 
-    @JoinColumn(name = "product_Id")
+    @JoinColumn(name = "product_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Product product;
 
-    @Column(name = "interest_Rate")
+    @Column(name = "interest_rate")
     private double interestRate;
 
-    @Column(name = "status")
+    @Column(name = "argement_status")
     private int status;
 
-    @Column(name = "sum")
+    @Column(name = "argement_sum")
     private double sum;
 
-    @Column(name = "created_At")
+    @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @Column(name = "updated_At")
+    @Column(name = "updated_at")
     private Timestamp updatedAt;
 
     @Override
