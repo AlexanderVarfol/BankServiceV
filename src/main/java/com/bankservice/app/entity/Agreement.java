@@ -22,7 +22,7 @@ public class Agreement {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "account_id")
+    @JoinColumn(name = "account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account account;

@@ -2,32 +2,19 @@ spring:
   main:
     banner-mode: off
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/first_db
-    username: root
-    password: Alex03!V
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-#  jpa:
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: none
-#
   liquibase:
     change-log: classpath:/db/changelog/changelog-master.xml
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/banking
+    username: root
+    password: 100369707
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: none
+    open-in-view: false
+    show-sql: false

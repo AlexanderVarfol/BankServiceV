@@ -51,7 +51,7 @@ public class Account {
     @JoinColumn(name = "client_id" , referencedColumnName = "id")
     private Client client;
 
-    @OneToMany(mappedBy = "transaction", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,
             orphanRemoval = true, cascade = {MERGE, PERSIST, REFRESH})
     private List<Agreement> agreementList;
 

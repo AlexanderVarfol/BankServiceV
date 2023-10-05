@@ -23,12 +23,12 @@ public class Transaction {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "debit_account_id")
+    @JoinColumn(name = "debit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account debitAccount;
 
-    @Column(name = "credit_account_id")
+    @JoinColumn(name = "credit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = {MERGE, PERSIST, REFRESH})
     private Account creditAccount;
@@ -45,23 +45,7 @@ public class Transaction {
     @Column(name = "created_at")
     private Timestamp createdAt;
 
-    @OneToMany(mappedBy = "transaction", fetch = FetchType.LAZY,
-            orphanRemoval = true, cascade = {MERGE, PERSIST, REFRESH})
-    private List<Account> accountList;
 
-    @Override
-    public String toString() {
-        return "Transaction{" +
-                "id=" + id +
-                ", debitAccountId=" + debitAccount +
-                ", creditAccountId=" + creditAccount +
-                ", type=" + type +
-                ", amount='" + amount + '\'' +
-                ", description=" + description +
-                ", createdAt=" + createdAt +
-                ", accountList=" + accountList +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
