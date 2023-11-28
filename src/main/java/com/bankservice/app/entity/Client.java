@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.security.Timestamp;
 import java.sql.ClientInfoStatus;
@@ -22,6 +23,7 @@ import static jakarta.persistence.CascadeType.*;
 public class Client {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @JoinColumn(name = "manager_id")
@@ -30,7 +32,7 @@ public class Client {
     private Manager manager;
 
     @Column(name = "client_status")
-    private ClientInfoStatus status;
+    private String status;
 
     @Column(name = "tax_code")
     private Integer taxCode;
@@ -50,6 +52,7 @@ public class Client {
     @Column(name = "phone_nummber")
     private String phone;
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Timestamp createdAt;
 

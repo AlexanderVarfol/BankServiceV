@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.security.Timestamp;
 import java.util.Objects;
@@ -20,6 +21,7 @@ import static jakarta.persistence.CascadeType.*;
 public class Agreement {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @JoinColumn(name = "account_id")
@@ -35,12 +37,13 @@ public class Agreement {
     @Column(name = "interest_rate")
     private double interestRate;
 
-    @Column(name = "argement_status")
-    private int status;
+    @Column(name = "agreement_status")
+    private Integer status;
 
     @Column(name = "argement_sum")
     private double sum;
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Timestamp createdAt;
 

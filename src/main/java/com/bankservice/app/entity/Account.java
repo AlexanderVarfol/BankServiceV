@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.security.Timestamp;
 import java.util.List;
@@ -24,6 +26,7 @@ public class Account {
 
     @Id
     @Column(name= "id" )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "account_name")
@@ -41,9 +44,11 @@ public class Account {
     @Column(name = "currency_code")
     private CurrencyCode currencyCode; //
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Timestamp createdAt;
 
+    @UpdateTimestamp
     @Column(name = "updated_at")
     private Timestamp updatedAt;
 

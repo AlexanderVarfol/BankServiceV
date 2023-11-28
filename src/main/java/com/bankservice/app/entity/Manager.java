@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.naming.Name;
 import java.security.Timestamp;
@@ -23,6 +24,7 @@ import static jakarta.persistence.CascadeType.*;
 public class Manager {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "first_name")
@@ -34,6 +36,7 @@ public class Manager {
     @Column(name = "manager_status")
     private ManagerStats status;
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Timestamp createdAt;
 

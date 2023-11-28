@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.security.Timestamp;
 import java.util.List;
@@ -21,6 +22,7 @@ import static jakarta.persistence.CascadeType.*;
 public class Product {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")
@@ -43,6 +45,7 @@ public class Product {
     @Column(name = "Produckt_limit")
     private int limit;
 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Timestamp createdAt;
 
