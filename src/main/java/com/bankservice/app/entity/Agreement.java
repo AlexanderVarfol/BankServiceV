@@ -40,7 +40,7 @@ public class Agreement {
     @Column(name = "agreement_status")
     private Integer status;
 
-    @Column(name = "argement_sum")
+    @Column(name = "agreement_sum")
     private double sum;
 
     @CreationTimestamp

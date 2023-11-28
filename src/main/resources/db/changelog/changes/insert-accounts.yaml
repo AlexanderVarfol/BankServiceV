@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-account1
+      author: admin
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+              - column:
+                  name: account_name
+                  value: 'Artur'
+              - column:
+                  name: account_type
+                  value: 'Muller'
+              - column:
+                  name: account_status
+                  value: 'ACTIVE'
+              - column:
+                  name: balance
+                  value: '12345'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('8bf3ede6-f0ee-4fdd-9aed-f2ef444bc7f4')"
+
+  - changeSet:
+      id: insert-account2
+      author: admin
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+              - column:
+                  name: account_name
+                  value: 'Artur'
+              - column:
+                  name: account_type
+                  value: 'Muller'
+              - column:
+                  name: account_status
+                  value: 'ACTIVE'
+              - column:
+                  name: balance
+                  value: '12345'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('8bf3ede6-f0ee-4fdd-9aed-f2ef444bc7f4')"

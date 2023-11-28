@@ -49,7 +49,7 @@ public class Client {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "phone_nummber")
+    @Column(name = "phone")
     private String phone;
 
     @CreationTimestamp

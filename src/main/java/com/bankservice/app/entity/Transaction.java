@@ -1,5 +1,6 @@
 package com.bankservice.app.entity;
 
+import com.bankservice.app.entity.enums.CurrencyCode;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -40,6 +41,9 @@ public class Transaction {
 
     @Column(name = "transaction_amount")
     private String amount;
+
+    @Column(name = "currency_code")
+    private CurrencyCode currencyCode;
 
     @Column(name = "description")
     private char description;

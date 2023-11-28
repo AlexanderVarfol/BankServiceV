@@ -33,7 +33,7 @@ public class Product {
             cascade = {MERGE, PERSIST, REFRESH})
     private Manager manager;
 
-    @Column(name = "Product_status")
+    @Column(name = "product_status")
     private int status;
 
     @Column(name = "currency_code")
@@ -42,7 +42,7 @@ public class Product {
     @Column(name = "interest_rate")
     private int interestRate;
 
-    @Column(name = "Produckt_limit")
+    @Column(name = "product_limit")
     private int limit;
 
     @CreationTimestamp
