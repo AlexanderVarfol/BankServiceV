@@ -1,0 +1,84 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-client1
+      author: admin
+      changes:
+        - insert:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('a1b01f70-6ec1-4160-87ee-dedd9630a58c')"
+              - column:
+                  name: client_status
+                  value: 'ACTIVE'
+              - column:
+                  name: tax_code
+                  value: '123456789'
+              - column:
+                  name: first_name
+                  value: 'John'
+              - column:
+                  name: last_name
+                  value: 'Doe'
+              - column:
+                  name: email
+                  value: 'john.doe@example.com'
+              - column:
+                  name: address
+                  value: '123 Main Street, City'
+              - column:
+                  name: phone
+                  value: '123-456-7890'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
+
+#                  оставил свой менеждер айди
+
+  - changeSet:
+      id: insert-client2
+      author: admin
+      changes:
+        - insert:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8c2641a2769')"
+              - column:
+                  name: client_status
+                  value: 'ACTIVE'
+              - column:
+                  name: tax_code
+                  value: '987654321'
+              - column:
+                  name: first_name
+                  value: 'Jane'
+              - column:
+                  name: last_name
+                  value: 'Smith'
+              - column:
+                  name: email
+                  value: 'jane.smith@example.com'
+              - column:
+                  name: address
+                  value: '456 Oak Street, Town'
+              - column:
+                  name: phone
+                  value: '987-654-3210'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 11:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 11:00:00'
+              - column:
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('b4924574-eb8c-47e0-9824-fe5ae6ca3933')"

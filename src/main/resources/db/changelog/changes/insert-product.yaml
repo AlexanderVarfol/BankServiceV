@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-product1
+      author: admin
+      changes:
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('8492a66a-c483-4819-bab6-8eae7fddb6b0')"
+              - column:
+                  name: name
+                  value: 'Product A'
+              - column:
+                  name: product_status
+                  value: 'ACTIVE'
+              - column:
+                  name: currency_code
+                  value: 'USD'
+              - column:
+                  name: interest_rate
+                  value: '0.05'
+              - column:
+                  name: product_limit
+                  value: '1000000'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 14:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 14:00:00'
+              - column:
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
+
+  - changeSet:
+      id: insert-product2
+      author: admin
+      changes:
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('f6762253-ab4a-44a6-b422-1589b587822d')"
+              - column:
+                  name: name
+                  value: 'Product B'
+              - column:
+                  name: product_status
+                  value: 'INACTIVE'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: interest_rate
+                  value: '0.03'
+              - column:
+                  name: product_limit
+                  value: '500000'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 15:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 15:00:00'
+              - column:
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('b14ee97b-bed6-4b5b-83d3-471f0dfee22b')"

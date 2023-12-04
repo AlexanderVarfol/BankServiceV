@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-agreement1
+      author: admin
+      changes:
+        - insert:
+            tableName: agreements
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('3ac3119c-9300-4f86-ab39-65627b6a2137')"
+              - column:
+                  name: interest_rate
+                  value: '0.02'
+              - column:
+                  name: agreement_status
+                  value: 'ACTIVE'
+              - column:
+                  name: agreement_sum
+                  value: '100000.00'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 12:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 12:00:00'
+              - column:
+                  name: product_id
+                  valueComputed: "UUID_TO_BIN('d7311e3b-c0c6-4f95-8b2f-1a04b3556372')"
+              - column:
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+
+  - changeSet:
+      id: insert-agreement2
+      author: admin
+      changes:
+        - insert:
+            tableName: agreements
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('80df6850-fc26-4690-ad91-0d0e07b15f83')"
+              - column:
+                  name: interest_rate
+                  value: '0.03'
+              - column:
+                  name: agreement_status
+                  value: 'INACTIVE'
+              - column:
+                  name: agreement_sum
+                  value: '50000.00'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 13:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 13:00:00'
+              - column:
+                  name: product_id
+                  valueComputed: "UUID_TO_BIN('e181a971-6f0a-4f65-a7a4-97dbab0e39fb')"
+              - column:
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('53f3e74a-1a8f-4a71-9803-9fb2c37e598d')"

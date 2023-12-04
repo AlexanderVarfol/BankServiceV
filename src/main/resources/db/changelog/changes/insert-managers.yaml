@@ -11,10 +11,10 @@ databaseChangeLog:
                   valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
               - column:
                   name: first_name
-                  value: 'Artur'
+                  value: 'Alex'
               - column:
                   name: last_name
-                  value: 'Muller'
+                  value: 'Vorf'
               - column:
                   name: manager_status
                   value: 'ACTIVE'

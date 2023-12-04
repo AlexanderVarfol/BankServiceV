@@ -25,9 +25,7 @@ public class AccountServiceImpl implements AccountService {
     @Transactional(timeout = 60,
             readOnly = true,
             isolation = Isolation.SERIALIZABLE)
-    //совокупность операций в одну процесс/транзакцию   -   поведение метода или всех меодов   -   вместо написания кода вручную
     public Account getAccountById(String id) {
         return accountRepository.getById(UUID.fromString(id));
     }
-
 }

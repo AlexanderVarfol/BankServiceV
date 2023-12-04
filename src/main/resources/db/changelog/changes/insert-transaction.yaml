@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-transaction1
+      author: admin
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('c64cbe1a-7b54-4e0d-aeb5-12cd172e180c')"
+              - column:
+                  name: transaction_type
+                  value: 'DEBIT'
+              - column:
+                  name: transaction_amount
+                  value: '5000.00'
+              - column:
+                  name: currency_code
+                  value: 'USD'
+              - column:
+                  name: description
+                  value: 'Purchase of goods'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 16:00:00'
+              - column:
+                  name: debit_account_id
+                  valueComputed: "UUID_TO_BIN('e5b04e37-b4d1-4f22-b3d6-17f05e97ce77')"
+              - column:
+                  name: credit_account_id
+                  valueComputed: "UUID_TO_BIN('f4095cf7-3cdc-4fee-aa58-db0758968a8d')"
+
+  - changeSet:
+      id: insert-transaction2
+      author: admin
+      changes:
+        - insert:
+            tableName: transactions
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('3dd9e19a-5c17-4656-b870-2edb1016967e')"
+              - column:
+                  name: transaction_type
+                  value: 'CREDIT'
+              - column:
+                  name: transaction_amount
+                  value: '2000.00'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: description
+                  value: 'Payment received'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 17:00:00'
+              - column:
+                  name: debit_account_id
+                  valueComputed: "UUID_TO_BIN('53f3e74a-1a8f-4a71-9803-9fb2c37e598d')"
+              - column:
+                  name: credit_account_id
+                  valueComputed: "UUID_TO_BIN('0f6e4b5a-dc37-482a-b8e7-1b263e125eb5')"

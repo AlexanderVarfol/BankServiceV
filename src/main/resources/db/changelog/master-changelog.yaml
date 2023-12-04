@@ -3,14 +3,17 @@ databaseChangeLog:
       file: db/changelog/changes/create-tables.yaml
   - include:
       file: db/changelog/changes/insert-managers.yaml
-#  - include:
-#      file: db/changelog/changes/insert-clients.yaml
+  - include:
+      file: db/changelog/changes/insert-clients.yaml
   - include:
       file: db/changelog/changes/insert-accounts.yaml
-#  - include:
-#      file: db/changelog/changes/insert-cards.yaml
-#  - include:
-#      file: db/changelog/changes/insert-transactions.yaml
+  - include:
+      file: db/changelog/changes/insert-agreement.yaml
+  - include:
+      file: db/changelog/changes/insert-product.yaml
 #  - include:
 #      file: db/changelog/changes/add-foreign-key-constraint.yaml
-
+#  - include:
+#      file: db/changelog/changes/insert-a1.yaml
+  - include:
+      file: db/changelog/changes/insert-transaction.yaml

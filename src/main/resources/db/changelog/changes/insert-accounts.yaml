@@ -11,10 +11,10 @@ databaseChangeLog:
                   valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
               - column:
                   name: account_name
-                  value: 'Artur'
+                  value: 'Alex'
               - column:
                   name: account_type
-                  value: 'Muller'
+                  value: 'CREDIT_CARD'
               - column:
                   name: account_status
                   value: 'ACTIVE'
@@ -43,13 +43,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+                  valueComputed: "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"
               - column:
                   name: account_name
-                  value: 'Artur'
+                  value: 'Sebi'
               - column:
                   name: account_type
-                  value: 'Muller'
+                  value: 'CREDIT_CARD'
               - column:
                   name: account_status
                   value: 'ACTIVE'
@@ -67,4 +67,73 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('8bf3ede6-f0ee-4fdd-9aed-f2ef444bc7f4')"
+                  valueComputed: "UUID_TO_BIN('b37cb795d1d50ed73348daa7af4f05b3')"
+  - changeSet:
+      id: insert-account3
+      author: admin
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('03aa810a-18db-4def-aa95-5512a6e83a7b')"
+              - column:
+                  name: account_name
+                  value: 'Oleg'
+              - column:
+                  name: account_type
+                  value: 'CREDIT_CARD'
+              - column:
+                  name: account_status
+                  value: 'ACTIVE'
+              - column:
+                  name: balance
+                  value: '12345.00'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('13c96cf7-4c27-44cb-a361-81c322f35a25')"
+
+  - changeSet:
+      id: insert-account4
+      author: admin
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('8dfa2ea9-201e-4363-94ce-88295009855c')"
+              - column:
+                  name: account_name
+                  value: 'Max'
+              - column:
+                  name: account_type
+                  value: 'CREDIT_CARD'
+              - column:
+                  name: account_status
+                  value: 'ACTIVE'
+              - column:
+                  name: balance
+                  value: '12345.00'
+              - column:
+                  name: currency_code
+                  value: 'EUR'
+              - column:
+                  name: created_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: updated_at
+                  value: '2023-09-18 10:00:00'
+              - column:
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('f79d096c-e445-4098-a31f-97bcb6460b50')"
