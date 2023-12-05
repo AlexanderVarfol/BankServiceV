@@ -1,4 +1,5 @@
 package com.bankservice.app.controller;
+import com.bankservice.app.entity.Account;
 import com.bankservice.app.entity.Agreement;
 import com.bankservice.app.service.util.AgreementService;
 import lombok.RequiredArgsConstructor;
@@ -18,14 +19,8 @@ public class AgreementController {
 
     private final AgreementService agreementService;
 
-    @GetMapping("/{id}")
-    public Agreement getAgreement(@PathVariable("id") String id) {
-
-        Optional<Agreement> opt = agreementService.getAgreementById(id);
-
-        if(opt.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "unreal id");
-        }
-        return opt.get();
+    @GetMapping(value = "/{id}")
+    public Agreement getAgreementById(@PathVariable("id") String id){
+        return agreementService.getAgreementById(id);
     }
 }
