@@ -1,4 +1,4 @@
-package com.bankservice.app.service.util;
+package com.bankservice.app.service;
 import com.bankservice.app.entity.Account;
 import com.bankservice.app.entity.Agreement;
 

@@ -1,14 +1,14 @@
 package com.bankservice.app.service.impl;
 
+import com.bankservice.app.dto.AccountDTO;
 import com.bankservice.app.entity.Account;
+import com.bankservice.app.mapper.AccountMapper;
 import com.bankservice.app.repository.AccountRepository;
-import com.bankservice.app.service.util.AccountService;
+import com.bankservice.app.service.AccountService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.util.UUID;
 
 @Service
@@ -16,9 +16,16 @@ import java.util.UUID;
 public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
+    private final AccountMapper accountMapper;
 
     @Override
     public Account getAccountById(String id) {
-        return accountRepository.getById(UUID.fromString(id));
+        return accountRepository.findById(UUID.fromString(id)).orElseThrow(()-> new EntityNotFoundException("Not Found"));
     }
+
+    @Override
+    public AccountDTO getAccountDto(String id) {
+        return accountMapper.toDto(getAccountById(id));
+    }
+
 }

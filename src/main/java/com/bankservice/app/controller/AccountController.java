@@ -1,8 +1,9 @@
 package com.bankservice.app.controller;
 
 
+import com.bankservice.app.dto.AccountDTO;
 import com.bankservice.app.entity.Account;
-import com.bankservice.app.service.util.AccountService;
+import com.bankservice.app.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
