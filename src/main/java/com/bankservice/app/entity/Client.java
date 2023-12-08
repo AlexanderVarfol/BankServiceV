@@ -11,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.security.Timestamp;
 import java.sql.ClientInfoStatus;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -24,7 +25,7 @@ public class Client {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @JoinColumn(name = "manager_id")
     @ManyToOne(fetch = FetchType.LAZY,

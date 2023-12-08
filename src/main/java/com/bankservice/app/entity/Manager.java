@@ -12,6 +12,7 @@ import javax.naming.Name;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -25,7 +26,7 @@ public class Manager {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @Column(name = "first_name")
     private String firstName;

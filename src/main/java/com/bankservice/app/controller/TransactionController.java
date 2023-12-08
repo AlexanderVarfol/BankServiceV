@@ -1,9 +1,9 @@
 package com.bankservice.app.controller;
 
-
-import com.bankservice.app.dto.AccountDTO;
 import com.bankservice.app.entity.Account;
+import com.bankservice.app.entity.Transaction;
 import com.bankservice.app.service.AccountService;
+import com.bankservice.app.service.TransactionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,20 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("account/")
+@RequestMapping("/transaction")
 @RequiredArgsConstructor
+public class TransactionController {
 
-public class AccountController {
-
-    public final AccountService accountService;
+    public final TransactionService transactionService;
 
     @GetMapping(value = "/{id}")
-    public Account getAccountById(@PathVariable("id") String id){
-        return accountService.getAccountById(id);
-    }
-
-    @GetMapping(value = "/Dto/{id}")
-    public AccountDTO getAccountDto(@PathVariable("id") String id){
-        return accountService.getAccountDto(id);
+    public Transaction getTransactionById(@PathVariable("id") String id){
+        return transactionService.getTransactionById(id);
     }
 }

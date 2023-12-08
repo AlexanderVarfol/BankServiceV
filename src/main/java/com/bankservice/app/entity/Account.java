@@ -13,6 +13,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -27,7 +28,7 @@ public class Account {
     @Id
     @Column(name= "id" )
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @Column(name = "account_name")
     private String name;
@@ -42,7 +43,7 @@ public class Account {
     private double balance;
 
     @Column(name = "currency_code")
-    private CurrencyCode currencyCode; //
+    private CurrencyCode currencyCode;
 
     @CreationTimestamp
     @Column(name = "created_at")

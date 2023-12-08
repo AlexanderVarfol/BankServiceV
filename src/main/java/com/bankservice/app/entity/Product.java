@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -23,7 +24,7 @@ public class Product {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @Column(name = "name")
     private String name;

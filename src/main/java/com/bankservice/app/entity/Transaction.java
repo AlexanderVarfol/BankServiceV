@@ -11,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -24,7 +25,7 @@ public class Transaction {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @JoinColumn(name = "debit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,

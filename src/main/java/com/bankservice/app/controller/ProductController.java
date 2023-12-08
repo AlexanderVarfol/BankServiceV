@@ -1,25 +1,25 @@
 package com.bankservice.app.controller;
 
-import com.bankservice.app.dto.AccountDTO;
+import com.bankservice.app.entity.Account;
+import com.bankservice.app.entity.Product;
 import com.bankservice.app.service.AccountService;
+import com.bankservice.app.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
-@RequestMapping("accountDTO/")
+@RequestMapping("/product")
 @RequiredArgsConstructor
+public class ProductController {
 
-public class AccountDTOController {
 
-    public final AccountService accountService;
+    public final ProductService productService;
 
     @GetMapping(value = "/{id}")
-    public AccountDTO getAccountDto(@PathVariable("id") String id){
-        return accountService.getAccountDto(id);
+    public Product getProductById(@PathVariable("id") String id){
+        return productService.getProductById(id);
     }
-
 }

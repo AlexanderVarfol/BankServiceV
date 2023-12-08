@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.security.Timestamp;
 import java.util.Objects;
+import java.util.UUID;
 
 import static jakarta.persistence.CascadeType.*;
 
@@ -22,7 +23,7 @@ public class Agreement {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private UUID id;
 
     @JoinColumn(name = "account_id")
     @ManyToOne(fetch = FetchType.LAZY,
@@ -35,13 +36,13 @@ public class Agreement {
     private Product product;
 
     @Column(name = "interest_rate")
-    private double interestRate;
+    private Double interestRate;
 
     @Column(name = "agreement_status")
     private Integer status;
 
     @Column(name = "agreement_sum")
-    private double sum;
+    private Double sum;
 
     @CreationTimestamp
     @Column(name = "created_at")
