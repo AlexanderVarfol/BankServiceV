@@ -20,8 +20,8 @@ public class ManagerServiceImpl implements ManagerService {
     private final ManagerMapper managerMapper;
 
     @Override
-    public Manager getManagerById(String id) {
-        return managerRepository.findById(UUID.fromString(id))
+    public Manager getManagerById(UUID id) {
+        return managerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Manager not found"));
     }
 

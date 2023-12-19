@@ -7,10 +7,9 @@ import com.bankservice.app.entity.Manager;
 import com.bankservice.app.service.ClientService;
 import com.bankservice.app.service.ManagerService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 
 @RestController
@@ -25,8 +24,8 @@ public class ManagerController {
 //        return managerService.getManagerById(id);
 //    }
 
-    @GetMapping(value = "/Dto/{id}")
-    public ManagerDTO getManagerDto(@PathVariable("id") String id){
+    @GetMapping("/get/{id}")
+    public ManagerDTO getManagerDto(@PathVariable UUID id){
         return managerService.getManagerDto(id);
     }
 }

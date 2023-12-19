@@ -7,9 +7,8 @@ import java.util.UUID;
 
 public interface ManagerService {
 
-    Manager getManagerById(String id);
+    Manager getManagerById(UUID id);
 
-    ManagerDTO getManagerDto(String id);
+    ManagerDTO getManagerDto(UUID id);
 }
-
 

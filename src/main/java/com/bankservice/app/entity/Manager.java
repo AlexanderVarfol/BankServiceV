@@ -2,25 +2,20 @@ package com.bankservice.app.entity;
 
 import com.bankservice.app.entity.enums.ManagerStats;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.naming.Name;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-import static jakarta.persistence.CascadeType.*;
-
 @Entity
 @Table(name = "managers")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class Manager {
     @Id

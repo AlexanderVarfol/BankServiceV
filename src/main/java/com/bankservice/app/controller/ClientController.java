@@ -5,7 +5,6 @@ import com.bankservice.app.dto.ClientDTO;
 import com.bankservice.app.entity.Client;
 import com.bankservice.app.service.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
