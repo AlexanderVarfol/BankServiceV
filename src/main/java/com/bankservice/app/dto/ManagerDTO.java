@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 
 @Data
-public class ManagerDTO implements Serializable {
+public class ManagerDTO {
     private String firstName;
     private String lastName;
     private String status;

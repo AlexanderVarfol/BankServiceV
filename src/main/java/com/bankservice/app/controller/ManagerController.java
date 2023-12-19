@@ -29,5 +29,4 @@ public class ManagerController {
     public ManagerDTO getManagerDto(@PathVariable("id") String id){
         return managerService.getManagerDto(id);
     }
-
 }

@@ -26,7 +26,7 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
-    public ManagerDTO getManagerDto(String id) {
+    public ManagerDTO getManagerDto(UUID id) {
         return managerMapper.toDto(getManagerById(id));
     }
 }

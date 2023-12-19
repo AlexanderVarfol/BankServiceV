@@ -44,8 +44,7 @@ public class Manager {
     @Column(name = "updated_at")
     private Timestamp updatedAt;
 
-    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY,
-            orphanRemoval = true, cascade = {MERGE, PERSIST, REFRESH})
+    @OneToMany(mappedBy = "manager", fetch = FetchType.EAGER)
     private List<Client> clients;
 
     @Override
