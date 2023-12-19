@@ -1,7 +1,9 @@
 package com.bankservice.app.controller;
 
 import com.bankservice.app.dto.ManagerDTO;
+import com.bankservice.app.entity.Agreement;
 import com.bankservice.app.entity.Client;
+import com.bankservice.app.entity.Manager;
 import com.bankservice.app.service.ClientService;
 import com.bankservice.app.service.ManagerService;
 import lombok.RequiredArgsConstructor;
@@ -18,9 +20,13 @@ public class ManagerController {
 
     private final ManagerService managerService;
 
-    @GetMapping(value = "/{id}")
+//    @GetMapping(value = "/{id}")
+//    public Manager getManagerById(@PathVariable("id") String id){
+//        return managerService.getManagerById(id);
+//    }
+
+    @GetMapping(value = "/Dto/{id}")
     public ManagerDTO getManagerDto(@PathVariable("id") String id){
         return managerService.getManagerDto(id);
     }
-
 }

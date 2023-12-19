@@ -1,5 +1,7 @@
 package com.bankservice.app.controller;
 
+import com.bankservice.app.dto.ManagerDTO;
+import com.bankservice.app.dto.ProductDTO;
 import com.bankservice.app.entity.Account;
 import com.bankservice.app.entity.Product;
 import com.bankservice.app.service.AccountService;
@@ -21,5 +23,10 @@ public class ProductController {
     @GetMapping(value = "/{id}")
     public Product getProductById(@PathVariable("id") String id){
         return productService.getProductById(id);
+    }
+
+    @GetMapping(value = "/Dto/{id}")
+    public ProductDTO getProductDto(@PathVariable("id") String id){
+        return productService.getProductDto(id);
     }
 }

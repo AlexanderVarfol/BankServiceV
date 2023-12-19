@@ -1,4 +1,5 @@
 package com.bankservice.app.controller;
+import com.bankservice.app.dto.AgreementDTO;
 import com.bankservice.app.entity.Agreement;
 import com.bankservice.app.service.AgreementService;
 import lombok.RequiredArgsConstructor;
@@ -17,5 +18,10 @@ public class AgreementController {
     @GetMapping(value = "/{id}")
     public Agreement getAgreementById(@PathVariable("id") String id){
         return agreementService.getAgreementById(id);
+    }
+
+    @GetMapping(value = "/Dto/{id}")
+    public AgreementDTO getAgreementDto(@PathVariable("id") String id){
+        return agreementService.getAgreementDto(id);
     }
 }

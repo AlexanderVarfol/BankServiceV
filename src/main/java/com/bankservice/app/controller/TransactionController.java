@@ -1,5 +1,6 @@
 package com.bankservice.app.controller;
 
+import com.bankservice.app.dto.TransactionDTO;
 import com.bankservice.app.entity.Account;
 import com.bankservice.app.entity.Transaction;
 import com.bankservice.app.service.AccountService;
@@ -20,5 +21,9 @@ public class TransactionController {
     @GetMapping(value = "/{id}")
     public Transaction getTransactionById(@PathVariable("id") String id){
         return transactionService.getTransactionById(id);
+    }
+    @GetMapping(value = "/Dto/{id}")
+    public TransactionDTO getTransactionDto(@PathVariable("id") String  id){
+        return transactionService.getTransactionDto(id);
     }
 }
