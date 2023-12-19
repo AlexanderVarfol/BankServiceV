@@ -60,7 +60,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  valueComputed: "UUID_TO_BIN('5fb5c142-7b08-4818-b251-bdc05523af8f')"
+                  valueComputed: "UUID_TO_BIN('7a03849c-9f4f-11ee-8c90-0242ac120002')"
               - column:
                   name: first_name
                   value: 'Ion'
@@ -86,7 +86,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  valueComputed: "UUID_TO_BIN('1bcd886d-b3fc-469c-8012-e67e79b35604')"
+                  valueComputed: "UUID_TO_BIN('aff22950-9f4f-11ee-8c90-0242ac120002')"
               - column:
                   name: first_name
                   value: 'Vlad'

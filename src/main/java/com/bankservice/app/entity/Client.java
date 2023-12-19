@@ -36,7 +36,7 @@ public class Client {
     private String status;
 
     @Column(name = "tax_code")
-    private Integer taxCode;
+    private String taxCode;
 
     @Column(name = "first_name")
     private String firstName;

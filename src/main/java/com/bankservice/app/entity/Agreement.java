@@ -55,8 +55,6 @@ public class Agreement {
     public String toString() {
         return "Agreement{" +
                 "id=" + id +
-                ", accountId=" + account +
-                ", productId=" + product +
                 ", interestRate=" + interestRate +
                 ", status=" + status +
                 ", sum=" + sum +
@@ -70,12 +68,12 @@ public class Agreement {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Agreement agreement = (Agreement) o;
-        return id == agreement.id && account == agreement.account && product == agreement.product;
+        return Objects.equals(id, agreement.id) && Objects.equals(status, agreement.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, account, product);
+        return Objects.hash(id, status);
     }
 }
 

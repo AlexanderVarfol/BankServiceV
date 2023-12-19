@@ -26,7 +26,7 @@ databaseChangeLog:
                   value: '2023-09-18 12:00:00'
               - column:
                   name: product_id
-                  valueComputed: "UUID_TO_BIN('d7311e3b-c0c6-4f95-8b2f-1a04b3556372')"
+                  valueComputed: "UUID_TO_BIN('8492a66a-c483-4819-bab6-8eae7fddb6b0')"
               - column:
                   name: account_id
                   valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
@@ -58,7 +58,7 @@ databaseChangeLog:
                   value: '2023-09-18 13:00:00'
               - column:
                   name: product_id
-                  valueComputed: "UUID_TO_BIN('e181a971-6f0a-4f65-a7a4-97dbab0e39fb')"
+                  valueComputed: "UUID_TO_BIN('f6762253-ab4a-44a6-b422-1589b587822d')"
               - column:
                   name: account_id
-                  valueComputed: "UUID_TO_BIN('53f3e74a-1a8f-4a71-9803-9fb2c37e598d')"
+                  valueComputed: "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"

@@ -26,7 +26,15 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public AccountDTO getAccountDto(String id) {
-        return accountMapper.toDto(getAccountById(id));
+        System.out.println(id);
+        System.out.println(UUID.fromString(id));
+        System.out.println(accountRepository.existsById(UUID.fromString(id)));
+        Account notFound1 = accountRepository.findById(UUID.fromString(id))
+                .orElseThrow(() -> new EntityNotFoundException("Not Found"));
+        System.out.println(notFound1);
+        AccountDTO notFound = accountMapper.toDto(notFound1);
+        System.out.println(notFound);
+        return notFound;
     }
 
 }

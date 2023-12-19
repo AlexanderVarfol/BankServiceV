@@ -32,7 +32,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('8bf3ede6-f0ee-4fdd-9aed-f2ef444bc7f4')"
+                  valueComputed: "UUID_TO_BIN('a1b01f70-6ec1-4160-87ee-dedd9630a58c')"
 
   - changeSet:
       id: insert-account2
@@ -67,7 +67,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('b37cb795d1d50ed73348daa7af4f05b3')"
+                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8c2641a2769')"
   - changeSet:
       id: insert-account3
       author: admin
@@ -101,7 +101,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('13c96cf7-4c27-44cb-a361-81c322f35a25')"
+                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8g2641a2764')"
 
   - changeSet:
       id: insert-account4
@@ -136,4 +136,4 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('f79d096c-e445-4098-a31f-97bcb6460b50')"
+                  valueComputed:  "UUID_TO_BIN('2f37d6df-db3d-4070-9a83-f8g2641a2764')"

@@ -26,10 +26,10 @@ databaseChangeLog:
                   value: '2023-09-18 16:00:00'
               - column:
                   name: debit_account_id
-                  valueComputed: "UUID_TO_BIN('e5b04e37-b4d1-4f22-b3d6-17f05e97ce77')"
+                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
               - column:
                   name: credit_account_id
-                  valueComputed: "UUID_TO_BIN('f4095cf7-3cdc-4fee-aa58-db0758968a8d')"
+                  valueComputed:  "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"
 
   - changeSet:
       id: insert-transaction2
@@ -58,7 +58,7 @@ databaseChangeLog:
                   value: '2023-09-18 17:00:00'
               - column:
                   name: debit_account_id
-                  valueComputed: "UUID_TO_BIN('53f3e74a-1a8f-4a71-9803-9fb2c37e598d')"
+                  valueComputed: "UUID_TO_BIN('03aa810a-18db-4def-aa95-5512a6e83a7b')"
               - column:
                   name: credit_account_id
-                  valueComputed: "UUID_TO_BIN('0f6e4b5a-dc37-482a-b8e7-1b263e125eb5')"
+                  valueComputed: "UUID_TO_BIN('8dfa2ea9-201e-4363-94ce-88295009855c')"

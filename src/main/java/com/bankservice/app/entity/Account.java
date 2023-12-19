@@ -34,13 +34,14 @@ public class Account {
     private String name;
 
     @Column(name = "account_type")
+    @Enumerated(value = EnumType.STRING)
     private AccountType type;
 
     @Column(name = "account_status")
-    private boolean status;
+    private Boolean status;
 
     @Column(name = "balance")
-    private double balance;
+    private Double balance;
 
     @Column(name = "currency_code")
     private CurrencyCode currencyCode;
@@ -53,14 +54,13 @@ public class Account {
     @Column(name = "updated_at")
     private Timestamp updatedAt;
 
-    @OneToOne(cascade = {MERGE, PERSIST, REFRESH})
+    @OneToOne(fetch = FetchType.LAZY,cascade = {MERGE, PERSIST, REFRESH})
     @JoinColumn(name = "client_id" , referencedColumnName = "id")
     private Client client;
 
-    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,
-            orphanRemoval = true, cascade = {MERGE, PERSIST, REFRESH})
-    private List<Agreement> agreementList;
-
+//    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,
+//            orphanRemoval = true, cascade //= {MERGE, PERSIST, REFRESH})
+//    private List<Agreement> agreementList;
 
     @Override
     public boolean equals(Object o) {
@@ -79,7 +79,6 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "id=" + id +
-                ", client_id=" + client +
                 ", name='" + name + '\'' +
                 ", type=" + type +
                 ", status=" + status +
