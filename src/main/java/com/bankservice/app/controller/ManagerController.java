@@ -23,9 +23,6 @@ public class ManagerController {
 //    public Manager getManagerById(@PathVariable("id") String id){
 //        return managerService.getManagerById(id);
 //    }
-
-
-
     @GetMapping("/get/{id}")
     public ManagerDTO getManagerDto(@PathVariable UUID id){
         return managerService.getManagerDto(id);
