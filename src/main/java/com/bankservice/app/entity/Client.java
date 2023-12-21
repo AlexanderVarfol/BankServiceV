@@ -23,9 +23,9 @@ import static jakarta.persistence.CascadeType.*;
 @NoArgsConstructor
 public class Client {
     @Id
-    @Column(name = "id")
+    @Column(name = "client_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID client_id;
 
     @JoinColumn(name = "manager_id")
     @ManyToOne(fetch = FetchType.LAZY,

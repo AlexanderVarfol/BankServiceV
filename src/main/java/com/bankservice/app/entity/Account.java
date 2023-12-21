@@ -55,7 +55,7 @@ public class Account {
     private Timestamp updatedAt;
 
     @OneToOne(fetch = FetchType.LAZY,cascade = {MERGE, PERSIST, REFRESH})
-    @JoinColumn(name = "id" , referencedColumnName = "id")
+    @JoinColumn(name = "client_id" , referencedColumnName = "client_id")
     private Client client;
 
 //    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,
