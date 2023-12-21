@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: products
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('8492a66a-c483-4819-bab6-8eae7fddb6b0')"
+                  name: product_id
+                  valueComputed: "UUID_TO_BIN('8d6dae24-df86-4793-a803-e416d34bfa37')"
               - column:
                   name: name
                   value: 'Product A'
@@ -20,10 +20,10 @@ databaseChangeLog:
                   value: 'USD'
               - column:
                   name: interest_rate
-                  value: '0.05'
+                  value: '0.02'
               - column:
                   name: product_limit
-                  value: '1000000'
+                  value: '100000'
               - column:
                   name: created_at
                   value: '2023-09-18 14:00:00'
@@ -32,7 +32,7 @@ databaseChangeLog:
                   value: '2023-09-18 14:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
+                  valueComputed: "UUID_TO_BIN('8ce569b2-840d-4016-92cf-7db042da1307')"
 
   - changeSet:
       id: insert-product2
@@ -42,8 +42,8 @@ databaseChangeLog:
             tableName: products
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('f6762253-ab4a-44a6-b422-1589b587822d')"
+                  name: product_id
+                  valueComputed: "UUID_TO_BIN('3b02db69-c79f-4fab-b3ff-b911ddeb56dc')"
               - column:
                   name: name
                   value: 'Product B'
@@ -67,4 +67,4 @@ databaseChangeLog:
                   value: '2023-09-18 15:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('b14ee97b-bed6-4b5b-83d3-471f0dfee22b')"
+                  valueComputed: "UUID_TO_BIN('d57d1286-6e5a-4700-b73e-36fde6c32d97')"

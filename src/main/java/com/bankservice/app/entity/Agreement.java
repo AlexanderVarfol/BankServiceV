@@ -21,9 +21,9 @@ import static jakarta.persistence.CascadeType.*;
 @NoArgsConstructor
 public class Agreement {
     @Id
-    @Column(name = "id")
+    @Column(name = "agreement_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID agreement_id;
 
     @JoinColumn(name = "account_id")
     @ManyToOne(fetch = FetchType.LAZY,
@@ -54,7 +54,7 @@ public class Agreement {
     @Override
     public String toString() {
         return "Agreement{" +
-                "id=" + id +
+                "id=" + agreement_id +
                 ", interestRate=" + interestRate +
                 ", status=" + status +
                 ", sum=" + sum +
@@ -68,12 +68,12 @@ public class Agreement {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Agreement agreement = (Agreement) o;
-        return Objects.equals(id, agreement.id) && Objects.equals(status, agreement.status);
+        return Objects.equals(agreement_id, agreement.agreement_id) && Objects.equals(status, agreement.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status);
+        return Objects.hash(agreement_id, status);
     }
 }
 

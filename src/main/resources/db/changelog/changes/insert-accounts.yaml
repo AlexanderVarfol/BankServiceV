@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: accounts
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('1154433b-9c9d-4ac5-a66a-67bede96c0da')"
               - column:
                   name: account_name
                   value: 'Alex'
@@ -32,7 +32,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('a1b01f70-6ec1-4160-87ee-dedd9630a58c')"
+                  valueComputed: "UUID_TO_BIN('50d56434-a001-11ee-8c90-0242ac120002')"
 
   - changeSet:
       id: insert-account2
@@ -42,8 +42,8 @@ databaseChangeLog:
             tableName: accounts
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('852163f4-5458-43a0-aff4-fb91961da523')"
               - column:
                   name: account_name
                   value: 'Sebi'
@@ -67,7 +67,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8c2641a2769')"
+                  valueComputed: "UUID_TO_BIN('21677ba0-a002-11ee-8c90-0242ac120002')"
   - changeSet:
       id: insert-account3
       author: admin
@@ -76,8 +76,8 @@ databaseChangeLog:
             tableName: accounts
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('03aa810a-18db-4def-aa95-5512a6e83a7b')"
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('1b485403-0a98-4016-bebf-ad2c9afce2be')"
               - column:
                   name: account_name
                   value: 'Oleg'
@@ -101,7 +101,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8g2641a2764')"
+                  valueComputed: "UUID_TO_BIN('2e631594-a002-11ee-8c90-0242ac120002')"
 
   - changeSet:
       id: insert-account4
@@ -111,8 +111,8 @@ databaseChangeLog:
             tableName: accounts
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('8dfa2ea9-201e-4363-94ce-88295009855c')"
+                  name: account_id
+                  valueComputed: "UUID_TO_BIN('3b3268af-b2e4-4e05-a041-7ec3cf6870ae')"
               - column:
                   name: account_name
                   value: 'Max'
@@ -136,4 +136,4 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: client_id
-                  valueComputed:  "UUID_TO_BIN('2f37d6df-db3d-4070-9a83-f8g2641a2764')"
+                  valueComputed:  "UUID_TO_BIN('396688ae-a002-11ee-8c90-0242ac120002')"

@@ -22,9 +22,9 @@ import static jakarta.persistence.CascadeType.*;
 @NoArgsConstructor
 public class Product {
     @Id
-    @Column(name = "id")
+    @Column(name = "product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID product_id;
 
     @Column(name = "name")
     private String name;
@@ -57,7 +57,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
+                "id=" + product_id +
                 ", name='" + name + '\'' +
                 ", managerId=" + manager +
                 ", status=" + status +
@@ -74,11 +74,11 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return id == product.id && manager == product.manager && Objects.equals(name, product.name);
+        return product_id == product.product_id && manager == product.manager && Objects.equals(name, product.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, manager);
+        return Objects.hash(product_id, name, manager);
     }
 }

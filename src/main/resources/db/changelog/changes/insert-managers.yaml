@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: managers
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('8ce569b2-840d-4016-92cf-7db042da1307')"
               - column:
                   name: first_name
                   value: 'Alex'
@@ -33,8 +33,8 @@ databaseChangeLog:
             tableName: managers
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('b14ee97b-bed6-4b5b-83d3-471f0dfee22b')"
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('d57d1286-6e5a-4700-b73e-36fde6c32d97')"
               - column:
                   name: first_name
                   value: 'Denis'
@@ -59,8 +59,8 @@ databaseChangeLog:
             tableName: managers
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('7a03849c-9f4f-11ee-8c90-0242ac120002')"
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('ce7f1ba1-2186-45af-9622-444414eaf3ed')"
               - column:
                   name: first_name
                   value: 'Ion'
@@ -85,8 +85,8 @@ databaseChangeLog:
             tableName: managers
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('aff22950-9f4f-11ee-8c90-0242ac120002')"
+                  name: manager_id
+                  valueComputed: "UUID_TO_BIN('b5ad4aa3-7f76-41c1-b845-9fd858bf9a46')"
               - column:
                   name: first_name
                   value: 'Vlad'

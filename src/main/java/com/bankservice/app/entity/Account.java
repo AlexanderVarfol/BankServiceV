@@ -26,9 +26,9 @@ import static jakarta.persistence.CascadeType.*;
 public class Account {
 
     @Id
-    @Column(name= "id" )
+    @Column(name= "account_id" )
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID account_id;
 
     @Column(name = "account_name")
     private String name;
@@ -55,7 +55,7 @@ public class Account {
     private Timestamp updatedAt;
 
     @OneToOne(fetch = FetchType.LAZY,cascade = {MERGE, PERSIST, REFRESH})
-    @JoinColumn(name = "client_id" , referencedColumnName = "id")
+    @JoinColumn(name = "id" , referencedColumnName = "id")
     private Client client;
 
 //    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,
@@ -78,7 +78,7 @@ public class Account {
     @Override
     public String toString() {
         return "Account{" +
-                "id=" + id +
+                "id=" + account_id +
                 ", name='" + name + '\'' +
                 ", type=" + type +
                 ", status=" + status +

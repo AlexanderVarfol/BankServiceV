@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: clients
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('a1b01f70-6ec1-4160-87ee-dedd9630a58c')"
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('50d56434-a001-11ee-8c90-0242ac120002')"
               - column:
                   name: client_status
                   value: 'ACTIVE'
@@ -38,7 +38,7 @@ databaseChangeLog:
                   value: '2023-09-18 10:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('6fd848cd-31e2-4462-b15e-3d11dd2c58cc')"
+                  valueComputed: "UUID_TO_BIN('8ce569b2-840d-4016-92cf-7db042da1307')"
 
 
 
@@ -50,8 +50,8 @@ databaseChangeLog:
             tableName: clients
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8c2641a2769')"
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('21677ba0-a002-11ee-8c90-0242ac120002')"
               - column:
                   name: client_status
                   value: 'ACTIVE'
@@ -81,7 +81,7 @@ databaseChangeLog:
                   value: '2023-09-18 11:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('b14ee97b-bed6-4b5b-83d3-471f0dfee22b')"
+                  valueComputed:  "UUID_TO_BIN('d57d1286-6e5a-4700-b73e-36fde6c32d97')"
 
   - changeSet:
       id: insert-client3
@@ -91,14 +91,14 @@ databaseChangeLog:
             tableName: clients
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('3e37d6df-db3d-4070-9a83-f8g2641a2764')"
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('2e631594-a002-11ee-8c90-0242ac120002')"
               - column:
                   name: client_status
                   value: 'ACTIVE'
               - column:
                   name: tax_code
-                  value: '987654321'
+                  value: '153479245'
               - column:
                   name: first_name
                   value: 'Bogdan'
@@ -122,7 +122,7 @@ databaseChangeLog:
                   value: '2023-09-18 11:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('7a03849c-9f4f-11ee-8c90-0242ac120002')"
+                  valueComputed: "UUID_TO_BIN('ce7f1ba1-2186-45af-9622-444414eaf3ed')"
 
   - changeSet:
       id: insert-client4
@@ -132,14 +132,14 @@ databaseChangeLog:
             tableName: clients
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('2f37d6df-db3d-4070-9a83-f8g2641a2764')"
+                  name: client_id
+                  valueComputed: "UUID_TO_BIN('396688ae-a002-11ee-8c90-0242ac120002')"
               - column:
                   name: client_status
                   value: 'ACTIVE'
               - column:
                   name: tax_code
-                  value: '987654321'
+                  value: '524883951'
               - column:
                   name: first_name
                   value: 'Bogdan'
@@ -163,4 +163,4 @@ databaseChangeLog:
                   value: '2023-09-18 11:00:00'
               - column:
                   name: manager_id
-                  valueComputed: "UUID_TO_BIN('aff22950-9f4f-11ee-8c90-0242ac120002')"
+                  valueComputed: "UUID_TO_BIN('b5ad4aa3-7f76-41c1-b845-9fd858bf9a46')"

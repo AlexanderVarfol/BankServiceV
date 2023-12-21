@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.io.Serializable;
 import java.security.Timestamp;
 import java.util.List;
 import java.util.Objects;
@@ -19,9 +20,9 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Manager {
     @Id
-    @Column(name = "id")
+    @Column(name = "manager_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID manager_id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -39,13 +40,13 @@ public class Manager {
     @Column(name = "updated_at")
     private Timestamp updatedAt;
 
-    @OneToMany(mappedBy = "manager", fetch = FetchType.EAGER)
-    private List<Client> clients;
+//    @OneToMany(mappedBy = "manager", fetch = FetchType.EAGER)
+//    private List<Client> clients;
 
     @Override
     public String toString() {
         return "Manager{" +
-                "id=" + id +
+                "id=" + manager_id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", status=" + status +
@@ -59,11 +60,11 @@ public class Manager {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Manager manager = (Manager) o;
-        return id == manager.id && Objects.equals(firstName, manager.firstName) && Objects.equals(lastName, manager.lastName);
+        return manager_id == manager.manager_id && Objects.equals(firstName, manager.firstName) && Objects.equals(lastName, manager.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName);
+        return Objects.hash(manager_id, firstName, lastName);
     }
 }

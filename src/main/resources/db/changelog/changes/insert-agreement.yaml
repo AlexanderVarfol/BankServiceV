@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: agreements
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('3ac3119c-9300-4f86-ab39-65627b6a2137')"
+                  name: agreement_id
+                  valueComputed: "UUID_TO_BIN('3ebe6700-a5b2-48b7-8f13-3bd5dc031f84')"
               - column:
                   name: interest_rate
                   value: '0.02'
@@ -24,12 +24,12 @@ databaseChangeLog:
               - column:
                   name: updated_at
                   value: '2023-09-18 12:00:00'
-              - column:
-                  name: product_id
-                  valueComputed: "UUID_TO_BIN('8492a66a-c483-4819-bab6-8eae7fddb6b0')"
+#              - column:
+#                  name: product_id
+#                  valueComputed: "UUID_TO_BIN('8d6dae24-df86-4793-a803-e416d34bfa37')"
               - column:
                   name: account_id
-                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+                  valueComputed: "UUID_TO_BIN('1154433b-9c9d-4ac5-a66a-67bede96c0da')"
 
   - changeSet:
       id: insert-agreement2
@@ -39,8 +39,8 @@ databaseChangeLog:
             tableName: agreements
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('80df6850-fc26-4690-ad91-0d0e07b15f83')"
+                  name: agreement_id
+                  valueComputed: "UUID_TO_BIN('1a72972f-27c1-4fe4-af9c-6e064bf5617e')"
               - column:
                   name: interest_rate
                   value: '0.03'
@@ -49,16 +49,16 @@ databaseChangeLog:
                   value: 'INACTIVE'
               - column:
                   name: agreement_sum
-                  value: '50000.00'
+                  value: '500000.00'
               - column:
                   name: created_at
                   value: '2023-09-18 13:00:00'
               - column:
                   name: updated_at
                   value: '2023-09-18 13:00:00'
-              - column:
-                  name: product_id
-                  valueComputed: "UUID_TO_BIN('f6762253-ab4a-44a6-b422-1589b587822d')"
+#              - column:
+#                  name: product_id
+#                  valueComputed: "UUID_TO_BIN('3b02db69-c79f-4fab-b3ff-b911ddeb56dc')"
               - column:
                   name: account_id
-                  valueComputed: "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"
+                  valueComputed: "UUID_TO_BIN('852163f4-5458-43a0-aff4-fb91961da523')"

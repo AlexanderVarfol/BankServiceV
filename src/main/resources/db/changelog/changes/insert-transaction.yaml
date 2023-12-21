@@ -7,8 +7,8 @@ databaseChangeLog:
             tableName: transactions
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('c64cbe1a-7b54-4e0d-aeb5-12cd172e180c')"
+                  name: transaction_id
+                  valueComputed: "UUID_TO_BIN('bf0c09e8-c9be-4a38-93dd-dbed094c832e')"
               - column:
                   name: transaction_type
                   value: 'DEBIT'
@@ -26,10 +26,10 @@ databaseChangeLog:
                   value: '2023-09-18 16:00:00'
               - column:
                   name: debit_account_id
-                  valueComputed: "UUID_TO_BIN('fde99ee7-4a95-414a-9cc1-328099b91ec2')"
+                  valueComputed: "UUID_TO_BIN('1154433b-9c9d-4ac5-a66a-67bede96c0da')"
               - column:
                   name: credit_account_id
-                  valueComputed:  "UUID_TO_BIN('40d47b72-f787-44f5-a9a2-306b733a6f2a')"
+                  valueComputed:  "UUID_TO_BIN('852163f4-5458-43a0-aff4-fb91961da523')"
 
   - changeSet:
       id: insert-transaction2
@@ -39,8 +39,8 @@ databaseChangeLog:
             tableName: transactions
             columns:
               - column:
-                  name: id
-                  valueComputed: "UUID_TO_BIN('3dd9e19a-5c17-4656-b870-2edb1016967e')"
+                  name: transaction_id
+                  valueComputed: "UUID_TO_BIN('7023a4db-b62d-4fcf-8345-c84e6b8369bf')"
               - column:
                   name: transaction_type
                   value: 'CREDIT'
@@ -58,7 +58,7 @@ databaseChangeLog:
                   value: '2023-09-18 17:00:00'
               - column:
                   name: debit_account_id
-                  valueComputed: "UUID_TO_BIN('03aa810a-18db-4def-aa95-5512a6e83a7b')"
+                  valueComputed: "UUID_TO_BIN('1b485403-0a98-4016-bebf-ad2c9afce2be')"
               - column:
                   name: credit_account_id
-                  valueComputed: "UUID_TO_BIN('8dfa2ea9-201e-4363-94ce-88295009855c')"
+                  valueComputed: "UUID_TO_BIN('3b3268af-b2e4-4e05-a041-7ec3cf6870ae')"

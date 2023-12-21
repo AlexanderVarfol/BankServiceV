@@ -7,7 +7,7 @@ databaseChangeLog:
             baseTableName: products
             baseColumnNames: manager_id
             referencedTableName: managers
-            referencedColumnNames: id
+            referencedColumnNames: manager_id
             constraintName: FK_products_managers
 
   - changeSet:
@@ -18,7 +18,7 @@ databaseChangeLog:
             baseTableName: clients
             baseColumnNames: manager_id
             referencedTableName: managers
-            referencedColumnNames: id
+            referencedColumnNames: manager_id
             constraintName: FK_clients_managers
 
   - changeSet:
@@ -29,19 +29,19 @@ databaseChangeLog:
             baseTableName: accounts
             baseColumnNames: client_id
             referencedTableName: clients
-            referencedColumnNames: id
+            referencedColumnNames: client_id
             constraintName: FK_accounts_clients
 
-  - changeSet:
-      id: addForeignKeyToAgreementProduct
-      author: admin
-      changes:
-        - addForeignKeyConstraint:
-            baseTableName: agreements
-            baseColumnNames: product_id
-            referencedTableName: products
-            referencedColumnNames: id
-            constraintName: FK_agreements_products
+#  - changeSet:
+#      id: addForeignKeyToAgreementProduct
+#      author: admin
+#      changes:
+#        - addForeignKeyConstraint:
+#            baseTableName: agreements
+#            baseColumnNames: product_id
+#            referencedTableName: products
+#            referencedColumnNames: product_id
+#            constraintName: FK_agreements_products
 
   - changeSet:
       id: addForeignKeyToAgreementAccount
@@ -51,9 +51,8 @@ databaseChangeLog:
             baseTableName: agreements
             baseColumnNames: account_id
             referencedTableName: accounts
-            referencedColumnNames: id
+            referencedColumnNames: account_id
             constraintName: FK_agreements_accounts
-
 
   - changeSet:
       id: addForeignKeyToTransactionDebitAccount
@@ -63,7 +62,7 @@ databaseChangeLog:
             baseTableName: transactions
             baseColumnNames: debit_account_id
             referencedTableName: accounts
-            referencedColumnNames: id
+            referencedColumnNames: account_id
             constraintName: FK_transactions_debit_accounts
 
   - changeSet:
@@ -74,5 +73,5 @@ databaseChangeLog:
             baseTableName: transactions
             baseColumnNames: credit_account_id
             referencedTableName: accounts
-            referencedColumnNames: id
+            referencedColumnNames: account_id
             constraintName: FK_transactions_credit_accounts

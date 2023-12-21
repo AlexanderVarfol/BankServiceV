@@ -23,9 +23,9 @@ import static jakarta.persistence.CascadeType.*;
 @NoArgsConstructor
 public class Transaction {
     @Id
-    @Column(name = "id")
+    @Column(name = "transaction_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID transaction_id;
 
     @JoinColumn(name = "debit_account_id")
     @ManyToOne(fetch = FetchType.LAZY,
@@ -56,7 +56,7 @@ public class Transaction {
     @Override
     public String toString() {
         return "Transaction{" +
-                "id=" + id +
+                "id=" + transaction_id +
                 ", debitAccount=" + debitAccount +
                 ", creditAccount=" + creditAccount +
                 ", type=" + type +
@@ -71,11 +71,11 @@ public class Transaction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return id == that.id && debitAccount == that.debitAccount && creditAccount == that.creditAccount;
+        return transaction_id == that.transaction_id && debitAccount == that.debitAccount && creditAccount == that.creditAccount;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, debitAccount, creditAccount);
+        return Objects.hash(transaction_id, debitAccount, creditAccount);
     }
 }
