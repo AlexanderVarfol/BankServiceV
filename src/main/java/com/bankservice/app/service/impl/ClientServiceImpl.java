@@ -25,7 +25,7 @@ public class ClientServiceImpl implements ClientService {
                 .orElseThrow(() -> new EntityNotFoundException("Client not found"));
     }
     @Override
-    public ClientDTO getClientDto(String id) {
-        return clientMapper.toDto(getClientById(id));
+    public ClientDTO getClientDto(String client_id) {
+        return clientMapper.toDto(getClientById(client_id));
     }
 }

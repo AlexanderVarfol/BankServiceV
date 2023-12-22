@@ -17,4 +17,4 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         ddl-auto: none
     open-in-view: false
-    show-sql: false
+#    show-sql:

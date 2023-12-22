@@ -28,7 +28,7 @@ public class Client {
     private UUID client_id;
 
     @JoinColumn(name = "manager_id")
-    @ManyToOne(fetch = FetchType.LAZY,
+    @ManyToOne(fetch = FetchType.EAGER,
             cascade = {MERGE, PERSIST, REFRESH})
     private Manager manager;
 
